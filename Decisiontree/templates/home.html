@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin Island Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(30,39,46,1);
+        }
+        .form-container {
+            text-align: center;
+            max-width: 400px;
+            margin: auto;
+        }
+        .form-group {
+            margin: 25px 0;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        label{
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1 style="color: goldenrod;">Penguin Island Prediction</h1>
+        
+        <form method="POST" action="{{ url_for('home') }}">
+            <div class="form-group">
+                <label for="a">Bill Length in mm:</label>
+                <input type="number" name="a" id="a" placeholder="e.g., 45.6">
+            </div>
+            
+            <div class="form-group">
+                <label for="b">Bill Depth in mm:</label>
+                <input type="number" name="b" id="b" placeholder="e.g., 18.2">
+            </div>
+            
+            <div class="form-group">
+                <label for="c">Flipper Length in mm:</label>
+                <input type="number" name="c" id="c" placeholder="e.g., 200">
+            </div>
+            <div class="form-group">
+                <label for="d">Body mass in grams:</label>
+                <input type="number" name="d" id="d" placeholder="e.g., 2000">
+            </div>
+            <div class="form-group">
+                <label for="e">Year:</label>
+                <input type="number" name="e" id="e" placeholder="e.g., 2019">
+            </div>
+            <div class="form-group">
+                <label for="f">Island:</label>
+                <select name="f" id="f">
+                    <option value="" disabled selected>Select Island</option>
+                    <option value="Torgersen">Torgersen</option>
+                    <option value="Biscoe">Biscoe</option>
+                    <option value="Dream">Dream</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="g">Sex:</label>
+                <select name="g" id="g">
+                    <option value="" disabled selected>Select Sex</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="submit-btn">Predict</button>
+        </form>      
+    </div>
+</body>
+</html>
